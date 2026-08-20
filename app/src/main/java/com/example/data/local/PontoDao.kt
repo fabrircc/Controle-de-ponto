@@ -25,7 +25,7 @@ interface PontoDao {
     @Query("SELECT * FROM funcionarios WHERE id = :id LIMIT 1")
     suspend fun getFuncionarioById(id: Long): Funcionario?
 
-    @Insert(onConflict = OnConflictStrategy.ABORT)
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insertFuncionario(funcionario: Funcionario): Long
 
     @Update

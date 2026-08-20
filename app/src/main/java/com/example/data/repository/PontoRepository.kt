@@ -89,6 +89,9 @@ class PontoRepository(private val pontoDao: PontoDao) {
                 dataCadastro = agora
             )
             val id = pontoDao.insertFuncionario(funcionario)
+            if (id == -1L) {
+                return@withContext Result.failure(Exception("Já existe um colaborador com a matrícula '$trimmedMatricula'."))
+            }
             Result.success(funcionario.copy(id = id))
         }
     }

@@ -57,7 +57,7 @@ class PontoViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     init {
-        val database = PontoDatabase.getDatabase(application, viewModelScope)
+        val database = PontoDatabase.getDatabase(application)
         repository = PontoRepository(database.pontoDao())
 
         allFuncionarios = repository.allFuncionarios.stateIn(
