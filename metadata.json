@@ -1,0 +1,7 @@
+{
+  "name": "Registro de Ponto",
+  "description": "Aplicativo de relógio de ponto eletrônico para registro de entrada e saída de funcionários com suporte a lançamentos retroativos, auditoria e relatórios.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
